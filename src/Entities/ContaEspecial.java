@@ -24,6 +24,12 @@ public class ContaEspecial extends ContaBancaria{
         if(valor.compareTo(getValorLimite()) > 0) {
             throw new IllegalArgumentException("O valor deve ser menor do que o limite");
         }
-        this.sacar(valor);
+        if (valor.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("O valor deve ser maior que 0");
+        }
+        if (getSaldo().subtract(valor).compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("Saldo insuficiente");
+        }
+        this.setSaldo(this.getSaldo().subtract(valor));
     }
 }

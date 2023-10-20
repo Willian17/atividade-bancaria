@@ -56,4 +56,8 @@ public class ContaBancaria {
         saldo = saldo.subtract(valor);
     }
 
+    public String toString() {
+        return "\n ---------- Conta --------- \n nome cliente:  " + this.getNomeCliente() + "\n Numero conta: " + this.getNumConta() + "\n saldo R$" + this.getSaldo();
+    }
+
 }

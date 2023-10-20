@@ -21,7 +21,7 @@ public class ContaPoupanca extends ContaBancaria {
         Calendar calendar = Calendar.getInstance();
 
         if(this.diaRendimento == calendar.get(Calendar.DAY_OF_MONTH)){
-            this.setSaldo(this.getSaldo().multiply(this.getSaldo().multiply(taxaRendimento)));
+            this.setSaldo(this.getSaldo().add(this.getSaldo().multiply(taxaRendimento)));
             return true;
         }
 
