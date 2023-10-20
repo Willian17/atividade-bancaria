@@ -2,7 +2,7 @@ package Entities;
 
 import java.math.BigDecimal;
 
-public class ContaBancaria {
+public abstract class ContaBancaria {
     private String nomeCliente;
     private int numConta;
     private BigDecimal saldo;
