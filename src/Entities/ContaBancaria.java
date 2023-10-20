@@ -1,7 +1,6 @@
 package Entities;
 
 import java.math.BigDecimal;
-import java.util.Objects;
 
 public class ContaBancaria {
     private String nomeCliente;
