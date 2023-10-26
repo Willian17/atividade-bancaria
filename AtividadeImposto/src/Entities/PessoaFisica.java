@@ -12,15 +12,15 @@ public class PessoaFisica extends Contribuinte {
             return 0;
         }
         if (this.getRendaBruta() <= 2100) {
-           return this.getRendaBruta() * 0.10;
+           return (this.getRendaBruta() * 0.10) - 100;
         }
         if(this.getRendaBruta() <= 2800) {
-            return this.getRendaBruta() * 0.15;
+            return (this.getRendaBruta() * 0.15) - 270;
         }
         if(this.getRendaBruta() <= 3600) {
-            return this.getRendaBruta() * 0.25;
+            return (this.getRendaBruta() * 0.25) - 500;
         }
-        return this.getRendaBruta() * 0.30;
+        return this.getRendaBruta() * 0.30 - 700;
 
     }
 }
